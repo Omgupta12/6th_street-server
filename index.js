@@ -1,5 +1,5 @@
 require("dotenv").config()
-const port = process.env.PORT||5000
+const PORT = process.env.PORT||5000
 const express = require("express");
 const dbConnect = require("./config/db");
 const authRoutes = require("./routes/auth.routes");
@@ -17,7 +17,7 @@ app.use("/auth", authRoutes);
 app.use("/products", productsRoutes);
 
 
-app.listen(port, async () => {
+app.listen(PORT, async () => {
   await dbConnect();
-  console.log(`server started on port ${port}`);
+  console.log(`server started on port ${PORT}`);
 });
