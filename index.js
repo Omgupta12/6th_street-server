@@ -1,5 +1,5 @@
-require("dotenv").config();
-port = process.env.PORT || 5000;
+require("dotenv").config()
+const port = process.env.PORT||5000
 const express = require("express");
 const dbConnect = require("./config/db");
 const authRoutes = require("./routes/auth.routes");
